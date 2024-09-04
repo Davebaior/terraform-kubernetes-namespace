@@ -3,8 +3,9 @@
 ### Add the following into your file
 ```
 module "example" {
-  source = "../"
-  name   = "my-first-namespace"
+  source         = "Davebaior/namespace/kubernetes"
+  name           = "my-first-namespace"
+  number-of-pods = 36
 }
 ```
 ### Run the following commands
@@ -12,4 +13,3 @@ module "example" {
     terraform init
     terraform apply
 ```
-
