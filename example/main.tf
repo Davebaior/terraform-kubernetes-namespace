@@ -1,5 +1,4 @@
-resource "kubernetes_namespace" "example" {
-  metadata {
-    name = "my-first-namespace"
-  }
+module example {
+  source = "../"
+  name = "my-first-namespace"
 }
