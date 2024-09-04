@@ -4,8 +4,8 @@ variable "name" {
   description = "The name of the namespace"
 }
 
-variable "number-of-pods" {
+variable number_of_pods {
   default = 36
   type = number
-  description = "The description of pods to create"
+  description = "The number of pods to create"
 }

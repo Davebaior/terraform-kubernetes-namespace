@@ -1,4 +1,4 @@
-resource "kubernetes-namespace" "this" {
+resource "kubernetes_namespace" "this" {
   metadata {
     name = var.name
   }
@@ -7,11 +7,11 @@ resource "kubernetes-namespace" "this" {
 resource "kubernetes_resource_quota" "pod" {
   metadata {
     name = "pod-quota"
-    namespace = kubernetes-namespace.this.metadata.0.name
+    namespace = kubernetes_namespace.this.metadata.0.name
   }
   spec {
     hard = {
-      pods = var.number-of-pods
+      pods = var.number_of_pods
     }
     scopes = ["BestEffort"]
   }
