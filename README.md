@@ -3,9 +3,13 @@
 ### Add the following into your file
 ```
 module "example" {
-  source         = "Davebaior/namespace/kubernetes"
-  name           = "my-first-namespace"
-  number-of-pods = 36
+  source = "../"
+  name   = "Davebaior/namespace/kubernetes"
+  number_of_pods = 36
+  labels = {
+    env = "dev"
+    createdBy = "terraform"
+  }
 }
 ```
 ### Run the following commands

@@ -1,8 +1,9 @@
 resource "kubernetes_namespace" "this" {
   metadata {
     name = var.name
+    labels = var.labels
+    }
   }
-}
 
 resource "kubernetes_resource_quota" "pod" {
   metadata {
@@ -16,3 +17,4 @@ resource "kubernetes_resource_quota" "pod" {
     scopes = ["BestEffort"]
   }
 }
+
